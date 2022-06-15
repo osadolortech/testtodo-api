@@ -8,3 +8,7 @@ class Todoserializers(serializers.ModelSerializer):
         fields = (
            'id','title','decriptions','completed'
         )
+
+
+def ok():
+    pass
