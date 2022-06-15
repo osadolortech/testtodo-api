@@ -1,4 +1,3 @@
-pythoy==3.10.5
 asgiref==3.5.2
 dj-database-url==0.5.0
 Django==4.0.5
