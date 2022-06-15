@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
-CORS_ORIGIN_ALLOW_ALL = True
+
 ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
@@ -80,8 +80,19 @@ WSGI_APPLICATION = 'api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#    "default": dj_database_url.config()
+# }
+
 DATABASES = {
-   "default": dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sqlite3',
+        'USER': 'sqlite3',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+     }
 }
 
 
@@ -114,6 +125,8 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Static files (CSS, JavaScript, Images)
